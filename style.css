@@ -1,0 +1,142 @@
+:root{
+    --btn-fir-color: #6cd4ff;
+    --btn-sec-color: #FF5CF4;
+
+    --bg-fir-color: #b8e5f8;
+    --bg-sec-color: #f5c0f1;
+
+    --dark-col:#212529;
+}
+
+body{
+    background: linear-gradient(135deg, var(--bg-fir-color),var(--bg-sec-color));
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.header{
+    margin-top: 50px;
+}
+#title{
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-decoration-line:underline;
+    font-size: 64px;
+    text-align: center;
+}
+.header h2{
+    font-style: oblique;
+    font-weight: 600;
+}
+thead {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+tbody td input{
+    border: 0 ;
+    background-color: transparent;
+    color: white; 
+}
+
+input:focus{
+    outline: none;
+}
+
+.grade, .credit, .gradeValue, .totalValue{
+    width: 100px;
+}
+
+.subName{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.151);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0;   
+}
+
+.btn{
+    border: 0;
+    border-radius: 0;
+}
+thead .btn {
+    background: linear-gradient(135deg,var(--btn-sec-color), #6cd3ff4b);
+}
+thead .btn:hover{
+    background: linear-gradient(135deg,var(--btn-sec-color), var(--btn-fir-color));
+}
+tbody .btn{
+    background: linear-gradient(135deg,var(--btn-fir-color),#ff5cf44b);
+    font-size: 10px;
+}
+
+tbody .btn:hover, .nice-number button:hover{
+    background: linear-gradient(135deg,var(--btn-fir-color),var(--btn-sec-color));
+}
+
+i{
+    color: white;
+}
+
+.nice-select{
+    border-radius: 0;
+    height: 31px;
+    line-height: 29px;
+}
+.nice-select .list{
+    border-radius: 0;
+    color: var(--dark-col);
+}
+
+.nice-select .option{
+    min-height: 31px;
+    line-height: 29px;
+}
+
+.nice-select, .nice-select .option:hover{
+    background-color: var(--dark-col);
+    color: white;
+}
+
+.nice-select .option.focus, .nice-select .option.selected.focus{
+    background-color: rgba(0, 0, 0, 0.096);
+    color:var(--dark-col);
+}
+
+
+.nice-number button{
+    width:20px;
+    height: 31px;
+    border: 0;
+    background: linear-gradient(135deg,#6cd3ff56,var(--btn-sec-color));
+    display: grid;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.results{
+    display: flex;
+    font-weight: bold;
+}
+
+#calculate {
+    background: linear-gradient(135deg, var(--btn-fir-color), var(--btn-sec-color)70%);
+    box-shadow: rgba(0, 0, 0, 0.24)0px 3px 8px;
+    transition: 0.25s;
+}
+
+#calculate:hover{
+    background: linear-gradient(135deg, var(--btn-fir-color)70%, var(--btn-sec-color));
+    box-shadow: rgba(255, 255, 255, 0.753)  0px 3px 8px;
+}
+
+.sgpa{
+    margin-left: 50px;
+    width: 88.15px;
+    height: 36px;
+    background-color: #d0f1ff;
+    text-align: center;
+    line-height: 36px;
+    box-shadow: rgba(255, 255, 255, 0.452) 0px 3px 8px;
+}
