@@ -2,11 +2,14 @@
     --btn-fir-color: #6cd4ff;
     --btn-sec-color: #FF5CF4;
 
-    --bg-fir-color: #b8e5f8;
-    --bg-sec-color: #f5c0f1;
+    --bg-fir-color: #d2edf8;
+    --bg-sec-color: #f5c0f8;
 
     --dark-col:#212529;
+
+    --result: #d0f1ff;
 }
+
 
 body{
     background: linear-gradient(135deg, var(--bg-fir-color),var(--bg-sec-color));
@@ -14,21 +17,27 @@ body{
     background-attachment: fixed;
 }
 
-.header{
-    margin-top: 50px;
-}
 #title{
+    display: inline-block;
+    margin: 50px auto 20px;
     font-weight: 700;
-    letter-spacing: 7px;
-    text-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    text-decoration-line:underline;
-    font-size: 64px;
-    text-align: center;
+    letter-spacing: 0.35rem;
+    /* text-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    font-size: 4rem;
+    text-align-last: center;
+    background-size: cover;
+    background: linear-gradient(135deg,var(--btn-fir-color),var(--btn-sec-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
+
 .header h2{
-    font-style: oblique;
+    
     font-weight: 600;
+    color: rgb(77, 145, 233);
 }
+
 thead {
     font-size: 1.2rem;
     font-weight: 600;
@@ -36,17 +45,13 @@ thead {
 
 
 tbody td input{
-    border: 0 ;
+    border: 0;
     background-color: transparent;
     color: white; 
 }
 
 input:focus{
     outline: none;
-}
-
-.grade, .credit, .gradeValue, .totalValue{
-    width: 100px;
 }
 
 .subName{
@@ -60,30 +65,38 @@ input:focus{
     border: 0;
     border-radius: 0;
 }
+
 thead .btn {
-    background: linear-gradient(135deg,var(--btn-sec-color), #6cd3ff4b);
+    background: linear-gradient(135deg,var(--btn-fir-color),var(--btn-sec-color));  
+    background-size: 250%;
+    background-position: 0% 100%;
+    transition: 0.2s;
 }
-thead .btn:hover{
-    background: linear-gradient(135deg,var(--btn-sec-color), var(--btn-fir-color));
-}
+
+
 tbody .btn{
-    background: linear-gradient(135deg,var(--btn-fir-color),#ff5cf44b);
     font-size: 10px;
+    
 }
 
-tbody .btn:hover, .nice-number button:hover{
-    background: linear-gradient(135deg,var(--btn-fir-color),var(--btn-sec-color));
+tbody .btn, .nice-number button{
+    background: linear-gradient(135deg,var(--btn-sec-color), var(--btn-fir-color));
+    background-size: 250%;
+    background-position: 0% 100%;
+    transition: 0.2s;
 }
 
-i{
-    color: white;
+tbody .btn:hover, .nice-number button:hover, thead .btn:hover, thead .btn:active,tbody .btn:active, .nice-number button:active{
+    background-position: 80% 80%;
 }
 
 .nice-select{
+    width: 108px;
     border-radius: 0;
     height: 31px;
     line-height: 29px;
 }
+
 .nice-select .list{
     border-radius: 0;
     color: var(--dark-col);
@@ -109,7 +122,6 @@ i{
     width:20px;
     height: 31px;
     border: 0;
-    background: linear-gradient(135deg,#6cd3ff56,var(--btn-sec-color));
     display: grid;
     vertical-align: middle;
     color: #fff;
@@ -121,22 +133,24 @@ i{
 }
 
 #calculate {
-    background: linear-gradient(135deg, var(--btn-fir-color), var(--btn-sec-color)70%);
-    box-shadow: rgba(0, 0, 0, 0.24)0px 3px 8px;
+    background: linear-gradient(135deg, var(--btn-fir-color), var(--btn-sec-color));
+    background-size: 300%;
+    background-position: 0% 100%;
+    box-shadow: rgba(0, 0, 0, 0.24)0px 3px 10px;
     transition: 0.25s;
 }
 
-#calculate:hover{
-    background: linear-gradient(135deg, var(--btn-fir-color)70%, var(--btn-sec-color));
-    box-shadow: rgba(255, 255, 255, 0.753)  0px 3px 8px;
+#calculate:hover, #calculate:active{
+    background-position: 70% 70%;
+    box-shadow: rgba(0, 0, 0, 0.329) 0px 3px 3px;
 }
 
 .sgpa{
     margin-left: 50px;
     width: 88.15px;
     height: 36px;
-    background-color: #d0f1ff;
+    background-color: var(--result);
     text-align: center;
     line-height: 36px;
-    box-shadow: rgba(255, 255, 255, 0.452) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.329) 0px 3px 3px;
 }
